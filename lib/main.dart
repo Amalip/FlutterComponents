@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_components/screens/screens.dart';
+import 'package:flutter_components/router/app_routes.dart';
 
 void main() => runApp(const MyApp());
 
@@ -11,14 +11,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      initialRoute: 'home',
-      routes: {
-        'home': (BuildContext context) => const HomeScreen(),
-        'listView1': (BuildContext context) => const ListView1Screen(),
-        'listView2': (BuildContext context) => const ListView2Screen(),
-        'cardView': (BuildContext context) => const CardScreen(),
-        'alertView': (BuildContext context) => const AlertScreen(),
-      },
+      initialRoute: AppRoutes.initialRoute,
+      routes: AppRoutes.routes,
+      onGenerateRoute: AppRoutes.onGenerateRoute,
     );
   }
 }
+
+//TODO CHECK GETX WHEN YOU GET ADVANCED ON FLUTTER
