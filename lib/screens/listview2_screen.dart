@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_components/themes/app_theme.dart';
 
 class ListView2Screen extends StatelessWidget {
   const ListView2Screen({Key? key}) : super(key: key);
@@ -13,17 +14,13 @@ class ListView2Screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Listview tipo 2"),
-        elevation: 0,
-        backgroundColor: Colors.indigo,
-      ),
+      appBar: AppBar(title: const Text("Listview tipo 2")),
       body: ListView.separated(
           itemBuilder: (context, index) => ListTile(
                 title: Text(games[index]),
-                leading: const Icon(Icons.bug_report, color: Colors.indigo),
-                trailing:
-                    const Icon(Icons.arrow_forward_ios, color: Colors.indigo),
+                leading:
+                    const Icon(Icons.bug_report, color: AppTheme.primaryColor),
+                trailing: const Icon(Icons.arrow_forward_ios),
                 onTap: () => {},
               ),
           separatorBuilder: (_, __) => const Divider(),

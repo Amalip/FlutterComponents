@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_components/themes/app_theme.dart';
 
 class ListView1Screen extends StatelessWidget {
   const ListView1Screen({Key? key}) : super(key: key);
@@ -21,7 +22,8 @@ class ListView1Screen extends StatelessWidget {
           ...games
               .map((game) => ListTile(
                     title: Text(game),
-                    leading: const Icon(Icons.bug_report),
+                    leading: const Icon(Icons.bug_report,
+                        color: AppTheme.primaryColor),
                     trailing: const Icon(Icons.arrow_forward_ios),
                   ))
               .toList(),
