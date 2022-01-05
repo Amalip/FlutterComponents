@@ -8,6 +8,14 @@ class AppTheme {
       //AppBar Theme
       appBarTheme: const AppBarTheme(color: primaryColor, elevation: 0),
 
+      //FAB Theme
+      floatingActionButtonTheme: const FloatingActionButtonThemeData(
+          backgroundColor: primaryColor, elevation: 10),
+
+      //ElevatedButton Theme
+      elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(shape: const StadiumBorder())),
+
       //TextButton Theme
       textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(primary: primaryColor)));
